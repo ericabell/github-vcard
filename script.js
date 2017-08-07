@@ -20,7 +20,7 @@ function processResults() {
   // create The Basics content HTML
   let basicsContent = `<h3>The Basics</h3>
   <dl>
-    <dt>Name:</dt> ${userData.name}
+    <dt>Name:</dt> <dd>${userData.name}</dd>
     <dt>Github URL:</dt> <dd><a href=${userData.url}>${userData.name}</a></dd>
     <dt>Email:</dt> <dd>${userData.email} - because I don't want SPAM!</dd>
     <dt>Company:</dt> <dd>${userData.company} - because don't have a company</dd>
