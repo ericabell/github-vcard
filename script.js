@@ -22,7 +22,7 @@ function processResults() {
   <dl>
     <dt>Name:</dt> ${userData.name}
     <dt>Github URL:</dt> <dd><a href=${userData.url}>${userData.name}</a></dd>
-    <dt>Email:</dt> <dd>${userData.email}</dd>
+    <dt>Email:</dt> <dd>${userData.email} - because I don't want SPAM!</dd>
     <dt>Company:</dt> <dd>${userData.company}</dd>
     <dt>Website:</dt> <dd>${userData.blog}</dd>
   </dl>
