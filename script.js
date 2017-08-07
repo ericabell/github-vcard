@@ -11,7 +11,15 @@ request.send();
 function processResults() {
   console.log(request.responseText);
   let userData = JSON.parse(request.responseText);
-  let basicsContent = `<dl>
+
+  // the containers for the data we will insert
+  let basicsContainer = document.querySelector('.basics');
+  let storyContainer = document.querySelector('.story');
+  let pictureContainer = document.querySelector('.picture');
+
+  // create The Basics content HTML
+  let basicsContent = `<h3>The Basics</h3>
+  <dl>
     <dt>Name</dt> ${userData.name}
     <dt>Github URL</dt> <dd>${userData.url}</dd>
     <dt>Email</dt> <dd>${userData.email}</dd>
@@ -19,9 +27,23 @@ function processResults() {
     <dt>Website</dt> <dd>${userData.blog}</dd>
   </dl>
   `
-  let basicsContainer = document.querySelector('.basics');
-  let storyContainer = document.querySelector('.story');
-  let pictureContainer = document.querySelector('.picture');
-
+  // insert the content
   basicsContainer.innerHTML = basicsContent;
+
+  // create The Story content HTML
+  let storyContent = `<h3>The Story</h3>
+  <p>${userData.bio}
+  </p>
+  `
+
+  // insert the content
+  storyContainer.innerHTML = storyContent;
+
+  // create The Picture content
+  let pictureContent = `<img src=${userData.avatar_url}>`
+
+  // insert the content
+  pictureContainer.innerHTML = pictureContent;
+
+
 }
