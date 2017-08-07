@@ -4,15 +4,31 @@ html, body {
 }
 
 header {
-  background: linear-gradient(#040404 30%, transparent 49%),
-        linear-gradient(-45deg, white 33%, transparent 33%) 0 50%,
-        white linear-gradient(45deg, white 33%, #000000 33%) 0 50%;
-  background-repeat: repeat-x;
-  background-size: 1px 100%, 40px 40px, 40px 40px;
+  background-color: rgb(0,0,0);
   color: rgb(255, 255, 255);
   text-align: center;
   font-size: 48pt;
 }
+
+.header{
+color:white;
+background-color:#000000;
+text-align:center;
+}
+.header:after {
+    content: " ";
+    display:block;
+    position: relative;
+    top:0px;left:0px;
+    width:100%;
+    height:36px;
+    background: linear-gradient(#000000 0%, transparent 0%), linear-gradient(135deg, #ffffff 33.33%, transparent 33.33%) 0 0%, #ffffff linear-gradient(45deg, #ffffff 33.33%, #000000 33.33%) 0 0%;
+    background: -webkit-linear-gradient(#000000 0%, transparent 0%), -webkit-linear-gradient(135deg, #ffffff 33.33%, transparent 33.33%) 0 0%, #ffffff -webkit-linear-gradient(45deg, #ffffff 33.33%, #000000 33.33%) 0 0%;
+    background: -o-linear-gradient(#000000 0%, transparent 0%), -o-linear-gradient(135deg, #ffffff 33.33%, transparent 33.33%) 0 0%, #ffffff -o-linear-gradient(45deg, #ffffff 33.33%, #000000 33.33%) 0 0%;
+    background: -moz-linear-gradient(#000000 0%, transparent 0%), -moz-linear-gradient(135deg, #ffffff 33.33%, transparent 33.33%) 0 0%, #ffffff -moz-linear-gradient(45deg, #ffffff 33.33%, #000000 33.33%) 0 0%;
+    background-repeat: repeat-x;
+    background-size: 0px 100%, 9px 27px, 9px 27px;
+    }
 
 
 main {
