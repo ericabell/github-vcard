@@ -20,11 +20,11 @@ function processResults() {
   // create The Basics content HTML
   let basicsContent = `<h3>The Basics</h3>
   <dl>
-    <dt>Name</dt> ${userData.name}
-    <dt>Github URL</dt> <dd>${userData.url}</dd>
-    <dt>Email</dt> <dd>${userData.email}</dd>
-    <dt>Company</dt> <dd>${userData.company}</dd>
-    <dt>Website</dt> <dd>${userData.blog}</dd>
+    <dt>Name:</dt> ${userData.name}
+    <dt>Github URL:</dt> <dd><a href=${userData.url}>${userData.name}</a></dd>
+    <dt>Email:</dt> <dd>${userData.email}</dd>
+    <dt>Company:</dt> <dd>${userData.company}</dd>
+    <dt>Website:</dt> <dd>${userData.blog}</dd>
   </dl>
   `
   // insert the content
@@ -40,7 +40,7 @@ function processResults() {
   storyContainer.innerHTML = storyContent;
 
   // create The Picture content
-  let pictureContent = `<img src=${userData.avatar_url}>`
+  let pictureContent = `<img class='circular' src=${userData.avatar_url}>`
 
   // insert the content
   pictureContainer.innerHTML = pictureContent;
